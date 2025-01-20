@@ -1,6 +1,6 @@
 {
     "cluster": {
-      "owner": "mohammad",
+      "owner": "nuruzzaman",
       "name": "pre-staging",
       "path": "v03-argocd-applications/directoryOfmanifests",
       "source_type": "directoryOfManifests",

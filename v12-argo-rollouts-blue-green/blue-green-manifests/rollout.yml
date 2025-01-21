@@ -15,7 +15,7 @@ spec:
       containers:
       - name: blue-green
         image: blue-green
-        imagePullPolicy: Never
+        #imagePullPolicy: Never
         env:
         - name: html_name
           value: "app-v1.html"

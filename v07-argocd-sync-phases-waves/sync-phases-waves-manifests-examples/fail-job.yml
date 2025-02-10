@@ -2,6 +2,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: mattermost-post-job-failure
+  annotations:
+    argocd.argoproj.io/hook: SyncFail
 spec:
   template:
     spec:
@@ -13,7 +15,7 @@ spec:
           - name: message
             value: "MESSAGE FROM ARGOCD: The last sync is:  *** Sync Failed ***"
           - name: url
-            value: "40.40.40.2:8065"
+            value: "40.40.40.2"
           - name: token
             value: "44m9dw18i7g1pg4re337pah5iw"
           - name: scheme

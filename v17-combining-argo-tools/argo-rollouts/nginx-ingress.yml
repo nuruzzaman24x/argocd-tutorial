@@ -1,17 +1,41 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
-  name: nginx-ingress
+  name: nginx-rollouts
 spec:
-  ingressClassName: nginx
-  rules:
-  - host: argo.demo
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: nginx-service
-            port:
-              number: 8080
+  replicas: 5
+  strategy:
+    canary:
+      steps:
+      - setWeight: 20
+      - pause: {}
+      - setWeight: 40
+      - pause: {duration: 10s}
+      - setWeight: 60
+      - pause: {duration: 20s}
+      - setWeight: 80
+      - pause: {duration: 1m}
+  selector:
+    matchLabels:
+      app: nginx-rollouts
+  template:
+    metadata:
+      labels:
+        app: nginx-rollouts
+    spec:
+      containers:
+      - name: nginx-rollouts
+        image: 40.40.40.2:5000/nginx:alpine
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  ports:
+  - port: 8080
+    targetPort: 80
+  selector:
+    app: nginx-rollouts

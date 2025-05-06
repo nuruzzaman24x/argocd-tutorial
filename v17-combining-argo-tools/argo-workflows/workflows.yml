@@ -6,7 +6,7 @@ spec:
   arguments:
     parameters:
       - name: repo-url
-        value: https://nuruzzaman24x:TOKEN@github.com/nuruzzaman24x/argocd-tutorial.git  # No token here, https://USERNAME:TOKEN@github.com/devopshobbies/argocd-tutorial.git
+        value: https://nuruzzaman24x:ghp_CHnOG51f1ExIu8OVP4LEoTW46myKM42kUL8@github.com/nuruzzaman24x/argocd-tutorial.git  # No token here, https://USERNAME:TOKEN@github.com/devopshobbies/argocd-tutorial.git
       - name: branch
         value: main
       - name: docker-hosted

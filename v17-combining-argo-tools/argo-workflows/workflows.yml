@@ -10,7 +10,7 @@ spec:
       - name: branch
         value: main
       - name: docker-hosted
-        value: 172.17.0.232:5000
+        value: 172.17.0.233:5000
   artifactRepositoryRef:
     configMap: workflow-controller-configmap
   entrypoint: ci

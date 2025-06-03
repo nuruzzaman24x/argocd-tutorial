@@ -12,6 +12,6 @@ spec:
           service:      # এই Ingress Resource rollout-bluegreen-active সার্ভিসে HTTP ট্র্যাফিক পাঠাবে।
             name: nginx-service
             port:
-              number: 8080
+              number: 8081
         path: /       # Root path /-এ আসা সব HTTP রিকোয়েস্ট Ingress-এর মাধ্যমে সার্ভিসে যাবে।
         pathType: Prefix    # যে কোনো / দিয়ে শুরু হওয়া URL রাউট করা হবে।

@@ -18,7 +18,8 @@ spec:
              - key: .dockerconfigjson
                path: config.json
      container:
-       image: moby/buildkit:v0.9.3-rootless
+       #image: moby/buildkit:v0.9.3-rootless
+       image: moby/buildkit:v0.11.6
        command: ["buildctl-daemonless.sh"]
        args:
          - build

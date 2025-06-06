@@ -12,7 +12,7 @@ spec:
       - name: docker-hosted
         value: 172.17.0.233:5000
   artifactRepositoryRef:
-    configMap: workflow-controller-configmap
+    configMap: artifact-repository
   entrypoint: ci
   templates:
   - name: ci

@@ -35,7 +35,7 @@ metadata:
   name: nginx-service
 spec:
   ports:
-  - port: 8081
+  - port: 8083
     targetPort: 80
   selector:
     app: nginx-rollouts

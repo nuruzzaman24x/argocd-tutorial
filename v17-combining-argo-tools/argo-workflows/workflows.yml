@@ -12,7 +12,7 @@ spec:
       - name: docker-hosted
         value: 172.17.0.233:5000
   artifactRepositoryRef:
-    configMap: artifact-repository
+    configMap: artifact-repository    #kubectl get configmaps -n argo || artifact-repository ai rokom nam asbe data soho#
   entrypoint: ci
   templates:
   - name: ci

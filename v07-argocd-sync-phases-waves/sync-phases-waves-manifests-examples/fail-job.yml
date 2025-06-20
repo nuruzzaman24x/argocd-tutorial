@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
         - name: mattermost-failure		#এখানে একটি কনটেইনার তৈরি হচ্ছে যার নাম mattermost-failure
-          image: mattermost:final		#এটি mattermost:final নামের Docker image ব্যবহার করছে।
+          image: mattermost/mattermost-team-edition:latest		#এটি mattermost:final নামের Docker image ব্যবহার করছে।
           command: [ "python3", "mattermost_api.py"]	#কনটেইনার চালু হলে Python দিয়ে mattermost_api.py স্ক্রিপ্ট রান করাবে
           env:
           - name: message			#তুমি কী বার্তা পাঠাবে Mattermost-এ — এখানে Sync Failed বার্তা আছে

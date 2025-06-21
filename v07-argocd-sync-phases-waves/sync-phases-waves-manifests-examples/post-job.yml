@@ -16,8 +16,8 @@ spec:
             value: "MESSAGE FROM ARGOCD: The last sync is:  *** Sync Failed ***"
           - name: url
             value: "172.17.0.232"               #Mattermost server-এর IP address
-          - name: token-for-digicon
-            value: "y5s81hurqpdobkcrb88aakfawy"     #Mattermost bot/token — তুমি Mattermost UI থেকে generate করে দিবে।
+          - name: token
+            value: "hn37xx697tnaixyy919eq33yro"     #Mattermost bot/token — তুমি Mattermost UI থেকে generate করে দিবে।
           - name: scheme
             value: "http"                                       #HTTP প্রোটোকল ব্যবহার করবে
           - name: port
